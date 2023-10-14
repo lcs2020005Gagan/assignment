@@ -1,0 +1,257 @@
+*{
+  padding: 0;
+  margin:0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.App{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.navbar {
+  background-color: transparent; /* Initial opacity */
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  transition: 1s;
+  z-index: 1000;
+  /* Other styles */
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.7); /* Scrolled opacity */
+  /* Other styles */
+  .links{
+    color: black;
+  }
+  .links2{
+    color: black;
+  }
+}
+
+.logo{
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.links{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: white;
+}
+
+.links2{
+color: white;
+}
+.links2:hover{
+  cursor: pointer;
+  filter: brightness(90%);
+}
+
+.home-page{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100vw;
+}
+.home-page img{
+  height: 100vh;
+  width: 100vw;
+}
+.history{
+  background-image: url('../src/assets/mountain4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+
+.carousel{
+  display: flex;
+  overflow-x: hidden;
+  padding: 3rem;
+  position: absolute;
+  bottom: 0;
+  gap: 1rem;
+ /* justify-content: space-around; */
+  background-color:rgb(4, 4, 72, 0.6);
+  width: 100vw;
+}
+.heading-2{
+  position: absolute;
+  top: 0; 
+}
+.carousel img{
+  width: 15rem;
+  height: 10rem;
+}
+
+.climb{
+  display: flex;
+  flex-direction: column;
+}
+.heading{
+  display: flex;
+  justify-content: space-around;
+  height: 20vh;
+  align-items: center;
+  padding: 4rem;
+}
+.head1{
+  font-size: 100px;
+  color: rgb(165, 165, 171);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.head2{
+  font-size: 50px;
+  color: rgb(60, 60, 111);
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-left:-3rem;
+  filter: brightness(80%);
+}
+
+.ProfileJsTabs{
+display: flex;
+overflow: auto;
+width: 100%;
+color: rgba(255, 255, 255, 0.806);
+list-style:none;
+text-decoration: none;
+gap: 1rem;
+font-size: 1.2rem;;
+position: sticky;
+top: 0;
+z-index: 100;
+background-color:rgb(4, 4, 72, 0.8);
+}
+.ProfileJsTabs li{
+padding: 0.5rem;
+list-style: none;
+cursor: pointer;
+transition-duration: 0.6s;
+text-decoration: none;
+text-underline-offset:unset;
+}
+
+.UlListActive{
+  background-color: rgba(255, 255, 255, 0.806);
+  color:rgb(4, 4, 72, 0.8);
+  cursor:pointer;
+  border-bottom: 1px solid rgb(4, 4, 72, 0.8) ;
+}
+
+.head4{
+  color: rgb(185, 185, 185);
+}
+.mountain1-main{
+  height: 60vh;
+  width: 100vw;
+  background-image: url('../src/assets/mountain5.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.schedule{
+  background-color: rgba(255, 255, 255, 0.459);
+  display: inline-block;
+  padding: 3rem;
+  position: absolute;
+  top: 7rem;
+  left: 7rem;
+}
+.schedule-heading{
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:rgb(4, 4, 72);
+  margin-left: -10px;
+}
+.mountain2-main{
+  background-image: url('../src/assets/mountain6.jpg');
+
+}
+
+@media (min-width: 768px) {
+ 
+
+  .mobile-view {
+    display: none; /* Hide on laptops and larger screens */
+  }
+}
+@media(max-width:768px){
+  .laptop-view {
+    display: none; /* Show on laptops and larger screens */
+  }
+  .head1{
+    font-size: 3rem;
+  } 
+  .head2{
+    font-size: 2rem;
+    margin-left: -1rem;
+    margin-top: -0.1rem;
+  }
+  .head3{
+    font-size: 0.8rem;
+  }
+  .head4{
+    font-size: 0.8rem;
+  }
+  .carousel{
+    padding: 1.5rem;
+  }
+  .schedule{
+    top:3rem;
+    left:1rem;
+  }
+}
+
+
+@media(max-width:768px){
+  .heading{
+    flex-wrap: wrap;
+
+  }
+}
+
+.ftr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(39, 39, 83);
+  color: rgb(66, 66, 123);
+  padding: 5vh;
+  font-weight: 900;
+}
+
+.horizontal-container {
+  display: flex;
+  align-items: center;
+  margin: 0 5vh ;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ccimg  {
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+  margin-right: 0.5vw;
+}
+.cc3{
+  font-size: smaller;
+  margin-left: -3vw;
+}
